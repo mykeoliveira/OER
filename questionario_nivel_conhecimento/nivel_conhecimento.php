@@ -70,12 +70,9 @@ echo "<script>
 }
 $nivel2 = $nivel;
 
-$sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'";
+$sql_update = utf8_encode("UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'");
 	//print $sql_update;
 mysqli_query($conexao, $sql_update);
-print $total;
-print $nivel2;
-print $sql_update;
 	
 
 if(mysqli_affected_rows() == 1)
