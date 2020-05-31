@@ -44,7 +44,7 @@ $consulta2 = mysqli_query($conexao, "SELECT usuario.tipo FROM usuario WHERE usua
  {
       $tipo = $result["tipo"];
  }
-
+print $total;
 if(($total  >= 0) && ($total  <= 500))
 {
 $nivel = "Nível Básico";
@@ -72,112 +72,99 @@ $nivel2 = $nivel;
 
 $sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'";
 	//print $sql_update;
-if(mysqli_query($conexao, $sql_update))
-{
+mysqli_query($conexao, $sql_update);
 	
-	if(mysqli_affected_rows() == 1)
-	{
-	?>
-		<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-			alert ("Registro realizado com sucesso!")
-        </SCRIPT>
-	<?php 
-	}	
+	
 
-} else {
+if(mysqli_affected_rows() == 1)
+{
 	?>
-		<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-			alert ("Não foi possível realizar o cadastro!")
+	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+		alert ("Registro realizado com sucesso!")
         </SCRIPT>
 	<?php 
-    exit;
-	}	
-	mysqli_close();	
+}	
+else
+{
+	?>
+	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+		alert ("Não foi possível realizar o cadastro!")
+        </SCRIPT>
+	<?php 
+  	exit;
+}	
+	//mysqli_close();	
 	
 	
-		if($tipo == 'SERIALISTA' && $nivel2 == 'Nível Básico')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/basico/serialista/serialista_basico_1.php"
-			</script>	
+if($tipo == 'SERIALISTA' && $nivel2 == 'Nível Básico')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/basico/serialista/serialista_basico_1.php"
+	</script>	
+    	<?php
+}
+elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Médio')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/medio/serialista/serialista_medio_1.php"
+	</script>		
+    	<?php
+}
+elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Avançado')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/avancado/serialista/serialista_avancado_1.php"
+	</script>	
+	<?php
+}
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Básico')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/basico/holista/holista_basico_1.php"
+	</script>		
+    	<?php
+}
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Médio')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/medio/holista/holista_medio_1.php"
+	</script>		
+    	<?php
+}
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Avançado')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/avancado/holista/holista_avancado_1.php"
+	</script>	
+    	<?php
+}
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Básico')
+{
+	?>
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/basico/convergente/convergente_basico_1.php"
+	</script>	
 		
-    		<?php
-			
-		}
-		elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Médio')
-		{
-			?>
+    	<?php
+}
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Médio')
+{
+	?>
     
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/medio/serialista/serialista_medio_1.php"
-			</script>	
+    	<script language="javascript" type="text/javascript">
+		location.href="../questionario_estilos/medio/convergente/convergente_medio_1.php"
+	</script>	
 		
-    		<?php
-		}
-		elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Avançado')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/avancado/serialista/serialista_avancado_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Básico')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/basico/holista/holista_basico_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Médio')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/medio/holista/holista_medio_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Avançado')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/avancado/holista/holista_avancado_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Básico')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/basico/convergente/convergente_basico_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Médio')
-		{
-			?>
-    
-    		<script language="javascript" type="text/javascript">
-			location.href="../questionario_estilos/medio/convergente/convergente_medio_1.php"
-			</script>	
-		
-    		<?php
-		}
-		elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Avançado')
-		{
+    	<?php
+}
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Avançado')
+{
 			?>
     
     		<script language="javascript" type="text/javascript">
@@ -185,9 +172,9 @@ if(mysqli_query($conexao, $sql_update))
 			</script>	
 		
     		<?php
-		}
-		elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
-		{
+}
+elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
+{
 			?>
     
     		<script language="javascript" type="text/javascript">
