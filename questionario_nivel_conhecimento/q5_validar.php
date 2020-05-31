@@ -10,9 +10,13 @@ $porcentagem = $_POST["porcentagem"];
 
 //echo $porcentagem;
 
+$dbname='heroku_3916b5627a97d8c';
+$usuario='be5e2232b15f70';
+$password='e3eeddaa';
+$localhost='us-cdbr-east-05.cleardb.net';
 //$id_session = $_SESSION['usuarioID'];
 
-$conexao = mysqli_connect("localhost","myke1","","REA") or die ('Não foi possível conectar');
+$conexao = mysqli_connect($localhost,$usuario,$password,$dbname) or die ('Não foi possível conectar');
 
 $sql_update = "UPDATE resultado SET resultadocinco='$porcentagem' WHERE id_usuario_resp='$id'";
 
