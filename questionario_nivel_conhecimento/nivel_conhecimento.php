@@ -5,7 +5,7 @@
 include ("../conecta.php");
 
 include ("../seguranca.php");
-//session_start();
+session_start();
 $numero = $_SESSION['login'];
 $id = $_SESSION["id"];
 
