@@ -74,7 +74,7 @@ $sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$tot
 	//print $sql_update;
 mysqli_query($conexao, $sql_update);
 	
-
+/*
 if(mysqli_affected_rows() == 1)
 {
 	?>
@@ -93,7 +93,7 @@ else
   	exit;
 }	
 	mysqli_close();	
-	
+*/	
 	
 if($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Basico')
 {
