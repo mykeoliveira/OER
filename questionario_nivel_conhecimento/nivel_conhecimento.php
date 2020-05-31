@@ -94,7 +94,7 @@ else
 }	
 	mysqli_close();	
 */	
-	
+print "oi";	
 if($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Basico')
 {
 	?>
@@ -121,6 +121,7 @@ elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Avancado')
 }
 elseif($tipo == 'HOLISTA' && $nivel2 == 'Nivel Basico')
 {
+	print "oi";
 	?>
     	<script language="javascript" type="text/javascript">
 		location.href="../questionario_estilos/basico/holista/holista_basico_1.php"
