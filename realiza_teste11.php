@@ -190,9 +190,13 @@ if($erros == 0)
              $tipos = ucfirst($indice);
           }
       }
+	
+  $dbname='heroku_3916b5627a97d8c';
+  $usuario='be5e2232b15f70';
+  $password='e3eeddaa';
+  $localhost='us-cdbr-east-05.cleardb.net';
 
-
-  $conexao = mysqli_connect("localhost","myke1","","REA") or die ('Não foi possível conectar');
+  $conexao = mysqli_connect($localhost,$usuario,$password,$dbname) or die ('Não foi possível conectar');
   $sql_1 = "INSERT INTO `questoes`(`um`, `dois`, `tres`, `quatro`, `cinco`, `seis`, `sete`, `oito`, `nove`, `dez`, `onze`, `doze`, `treze`, `catorze`, `quinze`, `dezesseis`, `dezessete`, `dezoito`, `login`)
   VALUES('$um','$dois', '$tres', '$quatro', '$cinco','$seis','$sete','$oito','$nove','$dez','$onze','$doze','$treze','$catorze','$quinze','$dezesseis', '$dezessete', '$dezoito', $id)";
   $sql_2 = "UPDATE `usuario` set `avaliado` = 1, `tipo` = '$tipos' where login ='$login' ";
