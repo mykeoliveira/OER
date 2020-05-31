@@ -11,9 +11,13 @@ $login = $_SESSION["login"];
 
 $porcentagem = $_POST["porcentagem"];
 
+$dbname='heroku_3916b5627a97d8c';
+$usuario='be5e2232b15f70';
+$password='e3eeddaa';
+$localhost='us-cdbr-east-05.cleardb.net';
 //$id_session = $_SESSION['usuarioID'];
 
-$conexao = mysqli_connect("localhost","myke1","","REA") or die ('Não foi possível conectar');
+$conexao = mysqli_connect($localhost,$usuario,$password,$dbname) or die ('Não foi possível conectar');
 
 $sql_insert = "INSERT INTO `resultado` (`id_resultado`, `id_usuario_resp`, `resultadoum`) VALUES (null, '$id', '$porcentagem')";
 
