@@ -69,12 +69,13 @@ echo "<script>
 	     </script>";
 }
 $nivel2 = $nivel;
-print $total;
-print $nivel;
+
 $sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'";
 	//print $sql_update;
 mysqli_query($conexao, $sql_update);
-	
+print $total;
+print $nivel2;
+print $sql_update;
 	
 
 if(mysqli_affected_rows() == 1)
@@ -94,7 +95,7 @@ else
 	<?php 
   	exit;
 }	
-	//mysqli_close();	
+	mysqli_close();	
 	
 	
 if($tipo == 'SERIALISTA' && $nivel2 == 'Nível Básico')
