@@ -44,7 +44,7 @@ $consulta2 = mysqli_query($conexao, "SELECT usuario.tipo FROM usuario WHERE usua
  {
       $tipo = $result["tipo"];
  }
-print $total;
+
 if(($total  >= 0) && ($total  <= 500))
 {
 $nivel = "Nível Básico";
@@ -69,7 +69,8 @@ echo "<script>
 	     </script>";
 }
 $nivel2 = $nivel;
-
+print $total;
+print $nivel;
 $sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'";
 	//print $sql_update;
 mysqli_query($conexao, $sql_update);
