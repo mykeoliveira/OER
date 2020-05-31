@@ -47,7 +47,7 @@ $consulta2 = mysqli_query($conexao, "SELECT usuario.tipo FROM usuario WHERE usua
 
 if(($total  >= 0) && ($total  <= 500))
 {
-$nivel = "Nível Básico";
+$nivel = "Nivel Basico";
 echo "<script>
 			alert('O seu nível de conhecimento foi considerado básico');
 	     </script>";
@@ -56,21 +56,21 @@ echo "<script>
  
 if(($total  > 500) && ($total  <= 800))
 {
-$nivel = "Nível Médio";
+$nivel = "Nivel Medio";
 echo "<script>
 			alert('O seu nível de conhecimento foi considerado intermediário');
 	     </script>";
 }
 if($total  > 800)
 {
-$nivel = "Nível Avançado";
+$nivel = "Nivel Avancado";
 echo "<script>
 			alert('O seu nível de conhecimento foi considerado avançado');
 	     </script>";
 }
 $nivel2 = $nivel;
 
-$sql_update = utf8_decode("UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'");
+$sql_update = "UPDATE usuario inner join resultado SET resultado.somatotal='$total', resultado.nivel = '$nivel2', usuario.nivel='$nivel2', usuario.avaliado = 2 WHERE id_usuario_resp='$id' and id_usuario = '$id'";
 	//print $sql_update;
 mysqli_query($conexao, $sql_update);
 	
@@ -95,7 +95,7 @@ else
 	mysqli_close();	
 	
 	
-if($tipo == 'SERIALISTA' && $nivel2 == 'Nível Básico')
+if($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Basico')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -103,7 +103,7 @@ if($tipo == 'SERIALISTA' && $nivel2 == 'Nível Básico')
 	</script>	
     	<?php
 }
-elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Médio')
+elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Medio')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -111,7 +111,7 @@ elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Médio')
 	</script>		
     	<?php
 }
-elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Avançado')
+elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nivel Avancado')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -119,7 +119,7 @@ elseif($tipo == 'SERIALISTA' && $nivel2 == 'Nível Avançado')
 	</script>	
 	<?php
 }
-elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Básico')
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nivel Basico')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -127,7 +127,7 @@ elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Básico')
 	</script>		
     	<?php
 }
-elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Médio')
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nivel Medio')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -135,7 +135,7 @@ elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Médio')
 	</script>		
     	<?php
 }
-elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Avançado')
+elseif($tipo == 'HOLISTA' && $nivel2 == 'Nivel Avancado')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -143,7 +143,7 @@ elseif($tipo == 'HOLISTA' && $nivel2 == 'Nível Avançado')
 	</script>	
     	<?php
 }
-elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Básico')
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nivel Basico')
 {
 	?>
     	<script language="javascript" type="text/javascript">
@@ -152,7 +152,7 @@ elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Básico')
 		
     	<?php
 }
-elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Médio')
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nivel Medio')
 {
 	?>
     
@@ -162,7 +162,7 @@ elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Médio')
 		
     	<?php
 }
-elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Avançado')
+elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nivel Avancado')
 {
 			?>
     
@@ -172,7 +172,7 @@ elseif($tipo == 'CONVERGENTE' && $nivel2 == 'Nível Avançado')
 		
     		<?php
 }
-elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
+elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nivel Basico')
 {
 			?>
     
@@ -182,7 +182,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Médio')
+		elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nivel Medio')
 		{
 			?>
     
@@ -192,7 +192,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Avançado')
+		elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nivel Avancado')
 		{
 			?>
     
@@ -202,7 +202,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}
-		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nível Básico')
+		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nivel Basico')
 		{
 			?>
     
@@ -212,7 +212,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nível Médio')
+		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nivel Medio')
 		{
 			?>
     
@@ -222,7 +222,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}
-		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nível Avançado')
+		elseif($tipo == 'IMPULSIVO' && $nivel2 == 'Nivel Avancado')
 		{
 			?>
     
@@ -232,7 +232,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nível Básico')
+		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nivel Basico')
 		{
 			?>
     
@@ -242,7 +242,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nível Médio')
+		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nivel Medio')
 		{
 			?>
     
@@ -252,7 +252,7 @@ elseif($tipo == 'DIVERGENTE' && $nivel2 == 'Nível Básico')
 		
     		<?php
 		}	
-		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nível Avançado')
+		elseif($tipo == 'REFLEXIVO' && $nivel2 == 'Nivel Avancado')
 		{
 			?>
     
