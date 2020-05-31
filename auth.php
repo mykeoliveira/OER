@@ -23,7 +23,7 @@ if($conexao)
       mysqli_select_db($conexao, $dbname);
       }  
       //Criamos o comando que efetua a busca do banco
-      $sql = "SELECT  id_usuario, nome, avaliado FROM usuario WHERE login = '$login' AND senha = '$senha'";
+      $sql = utf8_encode("SELECT  id_usuario, nome, avaliado FROM usuario WHERE login = '$login' AND senha = '$senha'");
 	 
       //Executamos o comando
 	  
