@@ -9,13 +9,18 @@ $senha = $_POST['senha'];
 //mysql_connect("Nome ou IP do servidor", "Usuario", "Senha");
 //include ("conecta.php");
 
-$conexao = mysqli_connect("localhost","myke1","","REA") or die ('Não foi possível conectar');
+$dbname='heroku_3916b5627a97d8c';
+$usuario='be5e2232b15f70';
+$password='e3eeddaa';
+$localhost='us-cdbr-east-05.cleardb.net';
+
+$conexao = mysqli_connect($localhost,$usuario,$password,$dbname) or die ('Não foi possível conectar');
 
 //caso a conexão seja estabelecida corretamente seleciona o banco de dados a ser usado
 
 if($conexao)
   	 {
-      mysqli_select_db($conexao, "REA");
+      mysqli_select_db($conexao, $dbname);
       }  
       //Criamos o comando que efetua a busca do banco
       $sql = "SELECT  id_usuario, nome, avaliado FROM usuario WHERE login = '$login' AND senha = '$senha'";
