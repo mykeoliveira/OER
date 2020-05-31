@@ -1,5 +1,5 @@
 <?php
-$dbname='heroku_3916b5627a97d8c';
+$dbname='REA/heroku_3916b5627a97d8c';
 $usuario='be5e2232b15f70';
 $password='e3eeddaa';
 $localhost='us-cdbr-east-05.cleardb.net';
