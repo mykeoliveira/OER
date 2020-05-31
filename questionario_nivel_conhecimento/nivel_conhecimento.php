@@ -9,9 +9,16 @@ include ("../seguranca.php");
   $numero = $_SESSION['login'];
   $id = $_SESSION["id"];
 //$id_session = $_SESSION['usuarioID'];
+$dbname='heroku_3916b5627a97d8c';
+$usuario='be5e2232b15f70';
+$password='e3eeddaa';
+$localhost='us-cdbr-east-05.cleardb.net';
+//$id_session = $_SESSION['usuarioID'];
+
+
 
 $consulta = "SELECT * FROM resultado WHERE id_usuario_resp = '$id'";
-$conexao = mysqli_connect("localhost","myke1","","REA") or die ('Não foi possível conectar');
+$conexao = mysqli_connect($localhost,$usuario,$password,$dbname) or die ('Não foi possível conectar');
 $busca_resul = mysqli_query ($conexao,$consulta) or die ("Erro no mysql_query: $query.".mysqli_error());
 
 while($linha = mysqli_fetch_array($busca_resul)){
