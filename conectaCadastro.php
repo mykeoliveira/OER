@@ -7,7 +7,7 @@ $login= $_POST ["login"];
 $senha= $_POST["senha"];
 
 //conectando com o localhost - mysqli
-$conexao = mysqli_connect("us-cdbr-east-05.cleardb.net","be5e2232b15f70","e3eeddaa","heroku_3916b5627a97d8c") or die ('Não foi possível conectar');
+$conexao = mysqli_connect("us-cdbr-east-05.cleardb.net","be5e2232b15f70","e3eeddaa","REA") or die ('Não foi possível conectar');
 $query = "INSERT INTO `usuario` (`nome`,`login`,`senha`) VALUES ('$nome', '$login', '$senha')";
 //print $query;
 mysqli_query($conexao, $query) or die ("Erro no comando SQL:".mysqli_error());
