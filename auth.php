@@ -81,7 +81,7 @@ if($conexao)
 	 print "$login $tipo1 $nivel1";
 		 }
 		 
-		if($tipo1 == 'SERIALISTA' && $nivel1 == 'Nível Básico')
+		if($tipo1 == 'SERIALISTA' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -92,7 +92,7 @@ if($conexao)
     		<?php
 			
 		}
-		elseif($tipo1 == 'SERIALISTA' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'SERIALISTA' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -102,7 +102,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'SERIALISTA' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'SERIALISTA' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
@@ -112,7 +112,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nível Básico')
+		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -122,7 +122,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -132,7 +132,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'HOLISTA' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
@@ -142,7 +142,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nível Básico')
+		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -152,7 +152,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -162,7 +162,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'CONVERGENTE' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
@@ -172,7 +172,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nível Básico')
+		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -182,7 +182,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -192,7 +192,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'DIVERGENTE' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
@@ -202,7 +202,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nível Básico')
+		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -212,7 +212,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -222,7 +222,7 @@ if($conexao)
 		
     		<?php
 		}
-		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'IMPULSIVO' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
@@ -232,7 +232,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nível Básico')
+		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nivel Basico')
 		{
 			?>
     
@@ -242,7 +242,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nível Médio')
+		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nivel Medio')
 		{
 			?>
     
@@ -252,7 +252,7 @@ if($conexao)
 		
     		<?php
 		}	
-		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nível Avançado')
+		elseif($tipo1 == 'REFLEXIVO' && $nivel1 == 'Nivel Avancado')
 		{
 			?>
     
