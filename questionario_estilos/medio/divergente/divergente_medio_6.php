@@ -943,8 +943,7 @@ function TypeChars(Chars){
 </div>
 <div class="line"></div>  <!-- Dividing line --> 
             Para acessar os materiais complementares, clique na figura abaixo.<br /><br />
-			<a target="_blank" href="http://arquivos.unicruz.edu.br/myke/questionario_estilos/medio/divergente/divergente_medio.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
-        
+			<a target="_blank" href="divergente.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
         
         
     </body>

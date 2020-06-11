@@ -922,7 +922,7 @@ function TypeChars(Chars){
 
             <div class="line"></div>  <!-- Dividing line --> 
             Para acessar os materiais complementares, clique na figura abaixo.<br /><br />
-			<a target="_blank" href="http://arquivos.unicruz.edu.br/myke/questionario_estilos/avancado/divergente/divergente_avancado.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
+			<a target="_blank" href="divergente_avancado.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
        
     
         

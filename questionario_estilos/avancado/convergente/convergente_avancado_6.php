@@ -941,7 +941,7 @@ Categoria Idade<br />Infantil 5 a 7<br />Juvenil 8 a 10<br />Adolescente 11 a 15
 
 <div class="line"></div>  <!-- Dividing line --> 
             Para acessar os materiais complementares, clique na figura abaixo.<br /><br />
-			<a target="_blank" href="http://arquivos.unicruz.edu.br/myke/questionario_estilos/avancado/convergente/convergente_avancado.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
+			<a target="_blank" href="convergente_avancado.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
        
       
         

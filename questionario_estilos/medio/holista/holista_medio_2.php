@@ -952,7 +952,7 @@ main()<br />{<br /> int v1, v2, v3, v4, v5, <span class="GapSpan" id="GapSpan0">
 
 <div class="line"></div>  <!-- Dividing line --> 
             Para acessar os materiais complementares, clique na figura abaixo.<br /><br />
-			<a target="_blank" href="http://arquivos.unicruz.edu.br/myke/questionario_estilos/medio/holista/holista_medio.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
+			<a target="_blank" href="holista.php">  <img src="../../../images/img1.png"  title="" width="80" height="80"/> </a>
         
         
         
