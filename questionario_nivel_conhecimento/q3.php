@@ -4,10 +4,10 @@ include ("../conecta.php");
 
 include ("../seguranca.php");
 
-  $login = $_SESSION['nome'];
-  $id = $_SESSION["id"];
-
-
+session_start();
+$numero = $_SESSION['nome'];
+$id = $_SESSION["id"];
+$login = $_SESSION["login"];
 
 
 ?>

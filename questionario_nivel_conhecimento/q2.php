@@ -1,9 +1,11 @@
 <?php
 
-//include ("../conecta.php");
+include ("../conecta.php");
 
-//include ("../seguranca.php");
+include ("../seguranca.php");
+
 session_start();
+  
 $numero = $_SESSION['nome'];
 $id = $_SESSION["id"];
 $login = $_SESSION["login"];
