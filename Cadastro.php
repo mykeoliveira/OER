@@ -70,7 +70,7 @@
             
             <div class="section" id="articles"> <!-- A new section with the articles -->
 
-				<!-- Article 1 start -->
+				<!-- Article start -->
 
                 <div class="line"></div>  <!-- Dividing line -->
                 
